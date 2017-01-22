@@ -1,10 +1,14 @@
 // Get the dialog
-let modal = document.getElementById('dilg_myProgress');
+var modal = document.getElementById('dilg_myProgress');
 // Get the button that opens the dialog
-let btn = document.getElementById('btn_myProgress');
+var btn = document.getElementById('btn_myProgress');
 
 // When the user clicks the button, open the dialog
-btn.addEventListener("click", function(){openDialog()});
+//btn.addEventListener('click', function(){openDialog();});
+
+btn.addEventListener("click", function(){
+  openDialog();
+});
 
 function openDialog() {
     modal.style.display = "block";
@@ -20,13 +24,13 @@ window.onclick = function(event) {
 
 // Progress bar
 function getProgress() {
-  let elem = document.getElementById('progress_bar');
-  let div = document.getElementById('progress_bar_div');
-  let label = document.getElementById('progress_bar_lbl');
-  let span = document.getElementById('amount_span');
-  let width = 0;
-  let amount = 0;
-  let id = setInterval(frame, 80);
+  var elem = document.getElementById('progress_bar');
+  var div = document.getElementById('progress_bar_div');
+  var label = document.getElementById('progress_bar_lbl');
+  var span = document.getElementById('amount_span');
+  var width = 0;
+  var amount = 0;
+  var id = setInterval(frame, 80);
 
   function frame() {
     if (width >= 45) {
