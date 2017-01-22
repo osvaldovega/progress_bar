@@ -50,6 +50,7 @@ body {
   border: 1px solid #000;
   border-radius: 8px;
   width: 28%;
+  min-width: 520px;
   top: 50%;
   left: 50%;
   position: absolute;
