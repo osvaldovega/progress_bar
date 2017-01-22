@@ -1,0 +1,41 @@
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+body {
+  margin: 0px;
+}
+
+.myAccount {
+  width: 100%;
+  padding: 1px 0 5px 20px;
+  background-color: #3D89DA;
+}
+
+/* Account text  */
+#page_title {
+  font-family: helvetica;
+  font-size: 17px;
+  color: #fff;
+  width: 115px;
+  border-bottom: 1px solid #fff;
+}
+
+/* Account  progress link  */
+#btn_myProgress {
+  cursor: pointer;
+  font-family: helvetica;
+  font-size: 12px;
+  border: none;
+  color: yellow;
+  background-color: transparent;
+}
+
+#btn_myProgress:hover {
+  text-decoration: underline;
+  color: yellow;
+}
