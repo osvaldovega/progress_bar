@@ -2,11 +2,15 @@
 let modal = document.getElementById('dilg_myProgress');
 // Get the button that opens the dialog
 let btn = document.getElementById('btn_myProgress');
+
 // When the user clicks the button, open the dialog
-btn.onclick = function() {
+btn.addEventListener("click", function(){openDialog()});
+
+function openDialog() {
     modal.style.display = "block";
     setTimeout(getProgress(), 5000);
 }
+
 // When the user clicks outside of the dialog, close it
 window.onclick = function(event) {
     if (event.target == modal) {
