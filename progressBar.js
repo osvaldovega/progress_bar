@@ -1,24 +1,18 @@
 // Get the dialog
-var modal = document.getElementById('dilg_myProgress');
+var dialog = document.getElementById('dilg_myProgress');
 // Get the button that opens the dialog
 var btn = document.getElementById('btn_myProgress');
 
 // When the user clicks the button, open the dialog
-//btn.addEventListener('click', function(){openDialog();});
-
-btn.addEventListener("click", function(){
-  openDialog();
-});
-
-function openDialog() {
-    modal.style.display = "block";
+btn.addEventListener("click", function openDialog() {
+    dialog.style.display = "block";
     setTimeout(getProgress(), 5000);
-}
+});
 
 // When the user clicks outside of the dialog, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
+    if (event.target == dialog) {
+        dialog.style.display = "none";
     }
 }
 
@@ -29,7 +23,6 @@ function getProgress() {
   var label = document.getElementById('progress_bar_lbl');
   var span = document.getElementById('amount_span');
   var width = 0;
-  var amount = 0;
   var id = setInterval(frame, 80);
 
   function frame() {
