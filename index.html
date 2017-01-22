@@ -4,41 +4,43 @@
     <meta charset="utf-8">
     <title>Interview Challange</title>
     <link rel="stylesheet" type="text/css" href="progressBar.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
-
     <section class="myAccount">
         <h3 id="page_title">Account Page</h3>
         <button id="btn_myProgress">Progress Link</button>
     </section>
 
-    <!-- My progress dialog -->
     <section id="dilg_myProgress" class="dialog">
         <section>
-            <!-- Dialog header -->
             <header>
                 <h2>Your Progress</h2>
             </header>
-
-            <!-- Dialog content -->
             <section>
                 <article>
-                    <h4>Reached:</h4>
-                    <div>
-                        <div id="progress_bar"></div>
-                        <section id="progress_bar_div">
-                            <span>&#94;</span>
-                            <label id="progress_bar_lbl"></label>
-                        </section>
-                    </div>
                     <article>
-                        <p>Target $125</p>
+                        <h4>Reached:</h4>
+                        <div>
+                            <div id="progress_bar"></div>
+                            <section id="progress_bar_div">
+                                <span>&#94;</span>
+                                <label id="progress_bar_lbl"></label>
+                            </section>
+                        </div>
+                        <article>
+                            <p>Target $125</p>
+                        </article>
                     </article>
+                    <p>
+                        <i class="fa fa-info-circle" aria-hidden="true"></i> You need <span id="amount_span"></span> more to reach your target
+                    </p>
                 </article>
             </section>
         </section>
     </section>
+    <script type="text/javascript" src="./progressBar.js"></script>
 </body>
 
 </html>
