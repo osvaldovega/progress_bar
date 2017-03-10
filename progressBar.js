@@ -12,9 +12,12 @@ btn.addEventListener("click", function openDialog() {
 // When the user clicks outside of the dialog, close it
 window.onclick = function(event) {
     if (event.target == dialog) {
+        clearInterval(internvalId);
         dialog.style.display = "none";
     }
 }
+
+var internvalId = 0;
 
 // Progress bar
 function getProgress() {
@@ -23,7 +26,7 @@ function getProgress() {
   var label = document.getElementById('progress_bar_lbl');
   var span = document.getElementById('amount_span');
   var width = 0;
-  var id = setInterval(frame, 80);
+  internvalId = setInterval(frame, 80);
 
   function frame() {
     if (width >= 45) {
